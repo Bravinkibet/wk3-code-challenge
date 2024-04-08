@@ -1,58 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code Challenge</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
-  <link rel="stylesheet" href="assets/index.css">
-</head>
-<body>
-  <!-- Navbar -->
-  <div class="heading">
-    <div class="item">
-      <h2 class="ui header">
-        <i class="orange ticket icon"></i>
-        <div class="content">FLATDANGO</div>
-        <div class="sub header" id="subtitle">BUY MOVIE TICKETS</div>
-      </h2>
-    </div>
-  </div>
-
-  <div class="ui centered grid">
-    <!-- Film List -->
-    <div class="four wide column">
-      <div class="list-container">
-        <ul class="ui divided list" id="films">
-          <!-- Movie titles will be dynamically added here -->
-        </ul>
-      </div>
-    </div>
-
-    <!-- Poster -->
-    <div class="four wide column">
-      <img id="poster" src="assets/placeholderImage.png" alt="[MOVIE TITLE]">
-    </div>
-
-    <!-- Showing Info -->
-    <div class="four wide column">
-      <div class="ui cards" id="showing">
-        <div class="card">
-          <div id="title" class="title">[MOVIE TITLE]</div>
-          <div id="runtime" class="meta">[RUNTIME] minutes</div>
-          <div class="content">
-            <div class="description" id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
-            <span id="showtime" class="ui label">[SHOWTIME]</span>
-            <span id="ticket-num">[X]</span> remaining tickets
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <!-- list of movies -->
+      <h1 id="title">Flatiron Movie Theater</h1>
+      <div class="container">
+        <div class="movie-home">
+          <ul id="movie-list"></ul>
+        </div>
+        <!-- movie details -->
+        <div class="movie-details">
+          <div class="movie-image">
+            <!-- Movie image will be displayed here -->
           </div>
-          <div class="extra content">
-            <button id="buy-ticket" class="ui orange button">Buy Ticket</button>
+          <div>
+            <div class="movie-description">
+              <!-- Movie details will be displayed here -->
+            </div>
+            <div class="ticket-details">
+              <button id="buy-ticket-button" disabled>Buy Ticket</button>
+              <button id = "delete-movie-button" disabled>Delete Movie</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="src/index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
